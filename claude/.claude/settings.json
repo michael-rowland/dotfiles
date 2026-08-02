@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)"
+    ],
+    "defaultMode": "default"
+  },
+  "preferredNotifChannel": "ghostty",
+  "tui": "fullscreen"
+}

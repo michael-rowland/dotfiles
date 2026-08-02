@@ -1,0 +1,1 @@
+--output "~/Downloads/%(extractor)s-%(uploader)s-%(id)s-%(title)s.%(ext)s" --cookies-from-browser firefox --restrict-filenames --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b"
