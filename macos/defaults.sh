@@ -65,6 +65,14 @@ done
 killall cfprefsd
 
 ###############################################################################
+# Screenshots                                                                 #
+###############################################################################
+
+# Save screenshots to Downloads instead of the Desktop
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+killall SystemUIServer 2>/dev/null || true
+
+###############################################################################
 # General UI                                                                  #
 ###############################################################################
 
