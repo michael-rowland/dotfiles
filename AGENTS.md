@@ -8,7 +8,7 @@ Each top-level directory is a Stow package mirroring its target under `$HOME`:
 
 | Package | Symlinks to | Contents |
 |---|---|---|
-| `fish/` | `~/.config/fish/` | shell config, prompt, fnm conf.d |
+| `zsh/` | `~/.zshrc`, `~/.zshenv`, `~/.zprofile` | login shell config: PATH, nvm, starship init |
 | `ghostty/` | `~/.config/ghostty/` | terminal config |
 | `zed/` | `~/.config/zed/` | editor keymap + settings (JSON) |
 | `yt-dlp/` | `~/.config/yt-dlp/` | yt-dlp config |
@@ -32,5 +32,5 @@ Non-package directories:
 
 ## Conventions
 - Adding a new package: `mkdir -p <pkg>/.config/<pkg>`, move the live config in, `stow <pkg>` from repo root, then add `<pkg>` to the `stow` line in `install.sh` and a row to the README table. Keep AGENTS.md's table in sync too.
-- Preserve exact formatting in shell scripts and JSON/fish configs — these are live configs synced to a real machine, not sample code.
+- Preserve exact formatting in shell scripts and JSON/shell configs — these are live configs synced to a real machine, not sample code.
 - `.DS_Store` files scattered in package dirs are macOS cruft, not meaningful; ignore them.

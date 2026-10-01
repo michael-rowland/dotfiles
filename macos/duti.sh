@@ -4,23 +4,22 @@
 
 set -euo pipefail
 
-duti -s com.sublimetext.4 .conf  all
-duti -s com.sublimetext.4 .fish  all
-duti -s com.sublimetext.4 .js    all
-duti -s com.sublimetext.4 .json  all
-duti -s com.sublimetext.4 .log   all
-duti -s com.sublimetext.4 .md    all
-duti -s com.sublimetext.4 .py    all
-duti -s com.sublimetext.4 .sh    all
-duti -s com.sublimetext.4 .sql   all
-duti -s com.sublimetext.4 .svelte all
-duti -s com.sublimetext.4 .yaml  all
-duti -s com.sublimetext.4 .yml   all
-duti -s com.sublimetext.4 public.plain-text all
+duti -s dev.zed.Zed .conf  all
+duti -s dev.zed.Zed .js    all
+duti -s dev.zed.Zed .json  all
+duti -s dev.zed.Zed .log   all
+duti -s dev.zed.Zed .md    all
+duti -s dev.zed.Zed .py    all
+duti -s dev.zed.Zed .sh    all
+duti -s dev.zed.Zed .sql   all
+duti -s dev.zed.Zed .svelte all
+duti -s dev.zed.Zed .yaml  all
+duti -s dev.zed.Zed .yml   all
+duti -s dev.zed.Zed public.plain-text all
 
 for file in "$HOME/Brewfile" "$HOME/Dockerfile" "$HOME/Makefile"; do
   if [[ -f "$file" ]]; then
-    xattr -w com.apple.LaunchServices.OpenWith com.sublimetext.4 "$file"
+    xattr -w com.apple.LaunchServices.OpenWith dev.zed.Zed "$file"
   fi
 done
 

@@ -18,7 +18,7 @@ brew bundle --file="$DOTFILES/Brewfile"
 # 3. Symlink configs via GNU Stow
 echo "==> Stowing configs..."
 cd "$DOTFILES"
-stow fish ghostty zed yt-dlp karabiner aws claude git
+stow zsh ghostty zed yt-dlp karabiner aws claude git
 
 # 4. Apply macOS system preferences
 echo "==> Applying macOS defaults..."

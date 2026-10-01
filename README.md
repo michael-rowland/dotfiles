@@ -41,7 +41,7 @@ Each top-level directory is a [Stow package](https://www.gnu.org/software/stow/m
 
 | Package | Symlinks to |
 |---|---|
-| `fish/` | `~/.config/fish/` |
+| `zsh/` | `~/.zshrc`, `~/.zshenv`, `~/.zprofile` |
 | `ghostty/` | `~/.config/ghostty/` |
 | `zed/` | `~/.config/zed/` |
 | `yt-dlp/` | `~/.config/yt-dlp/` |

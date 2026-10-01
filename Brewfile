@@ -10,8 +10,6 @@ brew "wget"
 brew "uv"
 
 # Shell
-brew "fish"
-brew "nushell"
 brew "starship"
 
 # Dotfile management
@@ -23,7 +21,6 @@ brew "duti"
 # Terminals & Editors
 cask "ghostty"
 cask "zed"
-cask "sublime-text"
 
 # Productivity
 cask "1password"
