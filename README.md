@@ -50,6 +50,31 @@ Each top-level directory is a [Stow package](https://www.gnu.org/software/stow/m
 | `claude/` | `~/.claude/settings.json` |
 | `git/` | `~/.gitconfig`, `~/.config/git/ignore` |
 
+## File type associations
+
+`macos/duti.sh` makes every text-ish file open in Zed.
+
+macOS associates files by UTI, not extension, and an extension only has a UTI
+if some installed app declares one. Extensions nothing declares (`.lua`,
+`.svelte`, `.nix`, `.conf`) get a *dynamic* UTI that doesn't conform to
+`public.plain-text`, so a plain-text default never catches them and `duti`
+can't bind them.
+
+To work around that, `macos/mkhelper/build.sh` installs a no-op app at
+`~/Applications/Text UTI Helper.app` whose only job is to *declare* those
+extensions as plain-text subtypes. It declares no document types — that would
+make the helper win the association instead of Zed.
+
+Two gotchas worth remembering:
+
+- A full `lsregister -r` rebuild **discards** duti's overrides, so `duti.sh`
+  only re-registers specific bundles.
+- `.ts` maps to `public.mpeg-2-transport-stream`, so it's bound by extension
+  to avoid sending real video files to Zed.
+
+To add an extension, add it to `EXTS` in `mkhelper/build.sh` **and**
+`helper_exts` in `duti.sh`, then re-run `bash macos/duti.sh`.
+
 ## Adding a new config
 
 ```bash
