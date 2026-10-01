@@ -1,3 +1,10 @@
 [user]
 	name = Michael Rowland
 	email = mrowland13@gmail.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC23ug7FcBuNQXFDU0sYs7mdOFTImSINfAxUJ6L1GZ0S5kub3jp81wXSpL/+UnU7X4nAFI88ZTHR/Fkxi1ERbksxoCdUIkB5RV45GM4+KDIHNj9NxNicbMLML5HNvLyJmvTecKJr0CfCWRgR5MzY8oJ3umIrLCRHuhP8yzUSjkY5UzXmKo5L2iRovNpGO/lKzmpiZ+cnf1/TEj/u5VQKunj1ITHBstRhnEnqMgMPDdNBPmOi9eZRf1D5rvNN5A5pNNcBmP9nqIqR93QMx5RdwK1WuFWXmfwMHWF8D8SBS9fGxvU6/hzTtHkyWpMyFmMfHQc0dEt62+xAURntUwc3XBveF8ZnkbLjtVyoykeo2ygMZSqY60Ij8G5iJPoDcek7u+KWpWB5YaJh0cwxAHO7VQizNGIkZiTuKl6zx8XqC8es/UmPQZlukHnQrmQkUNcoW4049j+VIxY4pIu1bopDD++cj01U1YdJyYnGW1djZ+2cI58sP/K/oaAhgjPy135i7k=
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

@@ -52,6 +52,9 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool false
 # List view style
 defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
 
+# Don't show external hard drives on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+
 # "Calculate all sizes" checkbox in View Options (Cmd+J). This lives in nested
 # dicts, so `defaults write` can't set it directly — use PlistBuddy instead.
 FINDER_PLIST="${HOME}/Library/Preferences/com.apple.finder.plist"
