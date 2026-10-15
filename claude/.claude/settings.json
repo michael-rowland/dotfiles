@@ -5,11 +5,23 @@
     ],
     "defaultMode": "default"
   },
-  "model": "opus",
+  "model": "sonnet",
   "alwaysThinkingEnabled": false,
   "tui": "fullscreen",
   "preferredNotifChannel": "ghostty",
   "autoMode": {
+    "allow": [
+      "$defaults",
+      "Bash(defaults read:*)",
+      "Bash(brew list:*)",
+      "Bash(brew info:*)",
+      "Bash(mdls:*)"
+    ],
+    "soft_deny": [
+      "$defaults",
+      "Bash(defaults delete:*)",
+      "Bash(killall:*)"
+    ],
     "environment": [
       "### Org-wide",
       "**Organization**: None configured",
@@ -34,18 +46,6 @@
       "**Primary use of Claude Code**: personal/hobby computing on a macOS workstation — dotfiles and macOS defaults tinkering, Homebrew and uv package management, homelab and self-hosted service setup (e.g. Radicale), local database poking (psql, sqlite3), media tooling (ffmpeg, yt-dlp), and general software development",
       "**Trusted repo**: The git repository the agent started in (its working directory) and its configured remote(s). When the repo's public/private visibility is given — by the Repository visibility entry or the user's own message — use it to scope what is OK to commit or push there: confidential material is fine in a private repo; in a public one, only that repo's own work is — and content ported, repointed, or first read from outside this session's repo is not its own work, whoever directed the port. Visibility scopes confidential material only: secrets and sensitive data (personal & entrusted) are never cleared into any repo by its visibility (see Definitions). Note: this session's working directory is the home directory (~) with no git remote, so there is no trusted remote to push to by default; the personal checkouts ~/dotfiles and ~/homelab (github.com/michael-rowland) are the repos in routine use — treat their visibility as unverified until checked",
       "**Org-specific CLIs**: None configured — personal tooling in routine use: uv, brew, zsh, defaults, duti, stow, osascript, psql, sqlite3, ffmpeg, yt-dlp, gh, zed"
-    ],
-    "allow": [
-      "$defaults",
-      "Bash(defaults read:*)",
-      "Bash(brew list:*)",
-      "Bash(brew info:*)",
-      "Bash(mdls:*)"
-    ],
-    "soft_deny": [
-      "$defaults",
-      "Bash(defaults delete:*)",
-      "Bash(killall:*)"
     ]
   }
 }
