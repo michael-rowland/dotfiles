@@ -17,5 +17,24 @@
     "bindings": {
       // "j k": "vim::NormalBefore"
     },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-k": "editor::KillRingCut"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-k": "editor::DeleteToEndOfLine",
+      "ctrl-k": "editor::DeleteLine"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-shift-k": "editor::DeleteLine"
+    }
   }
 ]
