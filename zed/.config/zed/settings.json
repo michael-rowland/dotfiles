@@ -35,6 +35,9 @@
     "font_family": "JetBrains Mono",
     "font_size": 18
   },
+  "title_bar": {
+    "show_sign_in": false
+  },
   "auto_install_extensions": {
     "sublime-mariana-theme": true
   },
