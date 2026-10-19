@@ -5,8 +5,8 @@ Personal macOS dotfiles managed with [GNU Stow](https://www.gnu.org/software/sto
 ## Fresh install
 
 ```bash
-git clone https://github.com/michael-rowland/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/michael-rowland/dotfiles.git ~/code/dotfiles
+cd ~/code/dotfiles
 ./install.sh
 ```
 
@@ -37,7 +37,7 @@ These can't (yet) be automated:
 
 ## Structure
 
-Each top-level directory is a [Stow package](https://www.gnu.org/software/stow/manual/stow.html). Running `stow <package>` from `~/dotfiles` creates symlinks in `$HOME` mirroring the package's directory tree.
+Each top-level directory is a [Stow package](https://www.gnu.org/software/stow/manual/stow.html). Running `stow <package>` from `~/code/dotfiles` creates symlinks in `$HOME` mirroring the package's directory tree.
 
 | Package | Symlinks to |
 |---|---|
@@ -79,13 +79,13 @@ To add an extension, add it to `EXTS` in `mkhelper/build.sh` **and**
 
 ```bash
 # Create the stow package structure
-mkdir -p ~/dotfiles/<package>/.config/<package>
+mkdir -p ~/code/dotfiles/<package>/.config/<package>
 
 # Move the live config into the repo
-mv ~/.config/<package>/config ~/dotfiles/<package>/.config/<package>/config
+mv ~/.config/<package>/config ~/code/dotfiles/<package>/.config/<package>/config
 
 # Stow it (creates the symlink back)
-cd ~/dotfiles && stow <package>
+cd ~/code/dotfiles && stow <package>
 
 # Add it to install.sh stow line
 ```

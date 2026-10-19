@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/code/dotfiles"
 
 echo "==> Starting dotfiles install..."
 
@@ -18,7 +18,7 @@ brew bundle --file="$DOTFILES/Brewfile"
 # 3. Symlink configs via GNU Stow
 echo "==> Stowing configs..."
 cd "$DOTFILES"
-stow zsh ghostty zed yt-dlp karabiner aws claude git
+stow -t "$HOME" zsh ghostty zed yt-dlp karabiner aws claude git
 
 # 4. Apply macOS system preferences
 echo "==> Applying macOS defaults..."

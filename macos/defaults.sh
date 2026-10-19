@@ -96,7 +96,7 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 "$(ke
 
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
-osascript -e 'tell application "System Events" to tell every desktop to set picture to "~/dotfiles/wallpapers/spirals/aqua-desktop.png"'
+osascript -e 'tell application "System Events" to tell every desktop to set picture to "~/code/dotfiles/wallpapers/spirals/aqua-desktop.png"'
 
 # Set default Finder window to Downloads
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
